@@ -1,0 +1,369 @@
+#ca-logo{
+	display: block;
+	@include  media("<=tablet"){
+		display: none;
+	}
+}
+#ca-logo-mobile{
+	display: none;
+	@include  media("<=tablet"){
+		display: block;
+	}
+}
+&.header{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+	transition: top 0.3s ease-in-out;
+	&--fixed{
+		z-index: 9999;
+		position: fixed;
+		background: $white;
+		padding:0;
+		box-shadow:0 5px 8px rgba(0,0,0,0.2);
+		transition: top 0.1s ease-in-out;
+
+		@include  media(">tablet"){
+			.navbar-default{
+				padding:0;
+				margin:0;
+
+				.navbar-toggle .icon-bar{
+					background-color: $dark-blue;
+				}
+			}
+
+			.navbar-default .navbar-nav > li{
+				padding:30px 0;
+				> a{
+					color: $dark-blue;
+				}
+			}
+
+			.navbar-btn{
+				background: transparent;
+				color: $light-blue;
+				border: 1px solid $light-blue;
+			}
+		}
+		@include  media("<=tablet"){
+			.navbar{
+				min-height: 0;
+				margin:0;
+			}
+			.navbar-default{
+				.navbar-toggle .icon-bar{
+					background-color: $dark-blue;
+				}
+			}
+		}
+
+	}
+}
+
+
+#about-dropdown{
+	li{
+		&:before{
+			left:63px;
+		}
+	}
+}
+#services-dropdown{
+	li{
+		&:before{
+			left:80px;
+		}
+	}
+}
+#insights-dropdown{
+	li{
+		&:before{
+			left:80px;
+		}
+	}
+}
+
+.navbar-brand {
+	@include media("<widescreen") {
+		max-width: 215px;
+	}
+	height: auto;
+
+	svg {
+		width:100%;
+		max-width: 250px;
+		display: block;
+		@include white-svg-logo;
+	}
+}
+
+.navbar-toggle {
+	margin: 10px 0 0 0;
+	border: none;
+} 
+
+.navbar-default {
+	@include media(">=desktop") {
+		padding: 8px 0;
+	}
+}
+
+.navbar-collapse {
+	z-index: 100;
+	@include media("<=tablet") {
+		padding: 0 15px;
+		margin: 0 -15px !important;
+		max-height: 80vh;
+	}
+
+}
+
+.navbar {
+	border: none;
+	z-index:100;
+}
+.navbar-collapse{
+	display: block;
+	.dropdown-toggle{
+		i{
+			@include media("<=tablet"){
+				position: absolute;
+				right: 28px;
+			}
+		}
+	}
+	ul.nav li:hover > ul.dropdown-menu {
+		display: block;
+		border-top:0;
+	}
+	@include media("<=tablet") {
+		visibility: hidden;
+		position: absolute;
+		left:-200px;
+		width:100%;
+		margin:0 !important;
+		opacity:0;
+		transition: all 0.2s ease-in;
+		background-color:$light-blue;
+		min-height: 1000px;
+		max-height: none !important;
+		border: 0;
+		padding:0;
+
+		ul.nav {
+			li{
+				width:100%;
+			}
+			> li  a{
+				width:100%;
+				padding:15px 25px;
+				border-bottom: 1px solid rgba($white,0.2);
+				&:hover,&:focus{
+					color: $white;
+				}
+			}
+			li:hover > ul.dropdown-menu{
+				display: none;
+			}
+			li:hover > ul.dropdown-menu.open{
+				display: block;
+			}
+			ul.dropdown-menu{
+				max-width: 100%;
+				width:100%;
+				display: none;
+				position: static;
+				box-shadow:none !important;
+				background-color: transparent;
+				border:0;
+				&.open{
+					display: block;
+				}
+				a{
+					padding-left: 40px;
+					&:before{
+						position: absolute;
+						content: '\f105';
+						margin-right: 10px;
+						font-family: FontAwesome;
+						left: 25px;
+					}
+				}
+			}
+		}
+		&.active{
+			visibility: visible;
+			left:0;
+			opacity:1;
+		}
+
+		.btn.navbar-btn{
+			display: block;
+			width:100%;
+			max-width: 95%;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			margin:10px auto;
+			font-size: 16px;
+		}
+	}
+}
+.navbar-container {
+	@include media(">tablet") {
+		display: flex;
+		align-items: center;
+   		justify-content: space-between;
+	}
+	@include media(">=widescreen") {
+		padding: 0;
+	}
+}
+.navbar-toggle{
+	@include media("<=tablet"){
+		display: block;
+	}
+}
+
+.navbar-header {
+	padding: 8px 0;
+	@include media(">tablet") {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+	}
+	@include media("<=tablet") {
+		float: none;
+		display: block;
+	}
+}
+
+.navbar-default .navbar-nav {
+	float: none;
+	@include media(">tablet") {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	@include media(">=widescreen") {
+		padding: 0 15px;
+	}
+	@include media(">=desktop") {
+		font-size: 16px;
+	}
+	> li {
+		@include media(">tablet") {
+			margin: 0 8px;
+			padding: 20px 0;
+		}
+		@include media(">=desktop") {
+			padding: 44px 0;
+			margin: 0 18px;
+		}
+		@include media(">=widescreen") {
+			margin: 0 33px;
+		}
+
+		&:last-child {
+			.dropdown-menu {
+				left: auto;
+				right: -12px;
+				&:before {
+					left: auto;
+					right: 4%;
+				}
+			}
+		}
+
+		&:first-child {
+			.dropdown-menu {
+				&:before {
+					left: 22%;
+				}
+			}
+		}
+
+		> a {
+			text-transform: uppercase;
+			@include media(">tablet") {
+				padding: 0;
+			}
+			i {
+				padding-left: 8px;
+				font-size: 23px;
+				line-height: 19px;
+				display: inline-block;
+				vertical-align: top;
+			}
+		}
+	}
+	a {
+		outline: none;
+		@include media("<=tablet") {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+
+	.dropdown-menu {
+		left: 3px;
+		padding:0;
+		min-width: 285px;
+		box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+		border-radius: 4px;
+		@include media(">tablet") {
+			top:95px;
+			max-width: 285px;
+			left: 0;
+		}
+		li {
+			&:first-child{
+				@include media(">tablet"){
+					&:before {
+						content: '';
+						position: absolute;
+						bottom: 100%;
+						left: 24%;
+						@include triangle(18px 9px, $orange, up);
+					}
+					&:hover{
+						&:before {
+							@include triangle(18px 9px, $light-orange, up);
+						}
+					}
+				}
+				a{
+					border-radius: 5px 5px 0 0;
+				}
+			}
+			&:last-child{
+				a{
+					border-radius: 0 0 5px 5px;
+				}
+			}
+			+ li {
+				a {
+					text-transform: capitalize;
+					@include media(">tablet") {
+						border-top: 1px solid #d09f5d;
+					}
+				}
+			}
+		}
+		a {
+			white-space: normal;
+			@include media(">tablet") {
+				padding: 10px 15px;
+				font-size: 16px;
+			}
+			&:hover {
+				@include media(">tablet") {
+					color: $white;
+					background: $light-orange;
+				}
+			} 
+		}
+	}
+}

@@ -1,0 +1,50 @@
+ul{ list-style: none}
+.sortable-ghost {
+	opacity: .2;
+}
+
+#foo .sortable-drag {
+	background: #daf4ff;
+}
+
+
+	.block__list {
+		padding: 20px 0;
+		max-width: 100%;
+		margin-top: -8px;
+		margin-left: 5px;
+		background-color: #fff;
+	}
+		.block__list-title {
+			margin: -20px 0 0;
+			padding: 10px;
+			text-align: center;
+			background: #5F9EDF;
+		}
+		.block__list li { cursor: move;
+			background:rgba(0, 0, 0, 0) url("../../../images/drag.png") no-repeat scroll -7px 9px !important;
+		}
+
+	.block__list_words li {
+		background-color: #fff;
+		padding: 10px 40px;
+	}
+		.block__list_words .sortable-ghost {
+			opacity: 0.4;
+			background-color: #F4E2C9;
+		}
+
+		.block__list_words li:first-letter {
+			text-transform: uppercase;
+		}
+
+
+.drag-handle {
+	margin-right: 10px;
+	font: bold 20px Sans-Serif;
+	color: #5F9EDF;
+	display: inline-block;
+	cursor: move;
+	cursor: -webkit-grabbing;  /* overrides 'move' */
+}
+

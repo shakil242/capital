@@ -1,0 +1,84 @@
+// custom variables and override bootstrap variables
+
+//Colors
+$white: #fff;
+$black: #000;
+$red: #be1d2d;
+$gray: #6b6b6d;
+$dark-blue: #003767;
+$light-blue: #4d8caa;
+$light-gray: #c9dce5;
+$orange: #a77430;
+$light-orange: #d09f5d;
+
+//Typography
+$font-family-sans-serif:  "Lato","Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$add-gf-cabin: 'Cabin', $font-family-sans-serif;
+$add-gf-open-sans: "Open Sans", $font-family-sans-serif;
+$font-size-h2: 30px;
+$font-size-h5: 20px;
+
+//Base Styles
+$body-bg: $white;
+$link-color: $orange;
+$link-hover-decoration: none;
+$link-hover-color: $gray;
+
+// Buttons Style
+$btn-font-weight: 700;
+$btn-default-color: #4d8caa;
+$btn-default-bg: transparent;
+$btn-default-border: #e5e5e5;
+$btn-warning-bg: $orange;
+$btn-warning-border: $orange;
+$btn-border-radius-base: 5px;
+$btn-primary-bg: #4d8caa;
+
+
+//Navbar Styles
+$navbar-default-color: $white;
+$navbar-default-bg: transparent;
+$navbar-height: 70px;
+$navbar-border-radius: 0;
+$navbar-padding-vertical: 0;
+$navbar-padding-horizontal: 0;
+$navbar-margin-bottom: 10px;
+$navbar-default-border: none;
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $orange;
+$navbar-default-link-hover-bg: transparent;
+$navbar-default-link-active-color: $orange;
+$navbar-default-link-active-bg:  transparent;
+$navbar-default-toggle-hover-bg: transparent;
+$navbar-default-toggle-icon-bar-bg: $white;
+$navbar-default-toggle-border-color: $white;
+
+//Dropdowns Styles
+$dropdown-bg: $orange;
+$dropdown-border: transparent;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-color: $red;
+
+// Panels Styles
+$panel-bg: $white;
+$panel-heading-padding: 0;
+$panel-border-radius: 0;
+
+//Pagination Styles
+$pagination-border: none;
+$pagination-hover-bg: transparent;
+$pagination-hover-color: #4d8caa;
+$pagination-active-color:  #4d8caa;
+$pagination-active-bg: transparent;
+$pagination-disabled-color:  #4d8caa;
+
+//Forms Styles
+$input-height-base: 55px;
+$font-size-base: 16px;
+$input-color: #003768;
+$input-border: $light-gray;
+$input-border-radius: 0;
+$input-color-placeholder: #a1a1a1;
+$form-group-margin-bottom: 19px;

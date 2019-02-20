@@ -1,0 +1,155 @@
+#footer {
+	background: $light-blue;
+	color: $white;
+	padding: 38px 0;
+	@include media(">=tablet") {
+		font-size: 14px;
+	}
+
+	@include media(">=desktop") {
+		padding-bottom: 60px;
+	}
+
+	@include media("<desktop") {
+		padding-bottom: 80px;
+	}
+
+	@include media("<tablet") {
+		padding-bottom: 100px;
+	}
+
+	@include media("<phone"){
+		padding-bottom: 100px;
+	}
+
+	@include media("<xs-phone") {
+		padding-bottom: 150px;
+	}
+
+	a{
+		text-decoration: underline;
+		color: $light-gray;
+	}
+
+	.sitemap{
+		a {
+			color: $light-gray;
+			text-decoration: none;
+			position: relative;
+			@include media("<=tablet") {
+				text-decoration: underline;
+			}
+			&:hover {
+				color: $white;
+				text-decoration: none;
+			}
+			&:hover{
+				&:after{
+					opacity: 1;
+					-webkit-transform: translateY(0px);
+					-moz-transform: translateY(0px);
+					transform: translateY(0px);
+				}
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 100%;
+				height: 1px;
+				background: #fff;
+				opacity: 0;
+				-webkit-transform: translateY(5px);
+				-moz-transform: translateY(5px);
+				transform: translateY(5px);
+				-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+				-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+				transition: transform 0.3s, opacity 0.3s;
+				pointer-events: none;
+			}
+		}
+	}
+
+	address {
+		margin: 0 0 8px;
+		span {
+			display: inline-block;
+			vertical-align: top;
+			padding: 0 8px;
+		}
+	}
+}
+
+.footer-holder {
+	line-height: 24px;
+
+	@include media("<=phone") {
+		font-size: 14px;
+		line-height: normal;
+	}
+
+	p {
+		margin: 0 0 20px;
+	}
+}
+
+.footer-links {
+	@extend %listreset;
+	color: #a2b7c6;
+	font-size: 11px;
+	@include media(">=phone") {
+		font-size: 14px;
+	}
+
+	li{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 15px;
+		position: relative;
+
+		+ li {
+			&:before {
+				content: '';
+				position: absolute;
+				left: -8px;
+				top: 50%;
+				transform: translateY(-45%);
+				height: 14px;
+				width: 1px;
+				background: #a2b7c6;
+			}
+		}
+	}
+}
+
+.sitemap {
+	@extend %listreset;
+	margin-bottom: 30px;
+	@include media(">=desktop") {
+		text-align: right;
+		margin: 0;
+	}
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0 10px 0 0;
+		@include media(">=desktop") {
+			display: block;
+			margin: 0 0 7px;
+			font-size: 15px !important;
+		}
+	}
+}
+
+.by {
+	color: #4b89a6;
+	@include media("<=phone") {
+		display: block;
+		margin-top: 5px;
+	}
+}
+.version{
+	color:rgba(255,255,255,0.2)
+}
